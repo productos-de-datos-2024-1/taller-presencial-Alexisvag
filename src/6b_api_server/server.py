@@ -15,7 +15,6 @@ import logging
 import os.path
 import pickle
 
-
 import pandas as pd
 import pkg_resources
 from flask import Flask, request
