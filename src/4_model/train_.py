@@ -13,7 +13,8 @@ from sklearn.neighbors import KNeighborsRegressor
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 
-CONFIG_FILE = "config/config.json"
+#CONFIG_FILE = "config/config.json"
+CONFIG_FILE = "config.json"
 
 with open(CONFIG_FILE, "r", encoding="utf-8") as file:
     config = json.load(file)

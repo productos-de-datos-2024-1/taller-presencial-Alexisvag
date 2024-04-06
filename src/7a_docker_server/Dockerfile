@@ -1,3 +1,4 @@
+# 
 # Docker Server
 # =============================================================================
 #
@@ -10,7 +11,7 @@
 #
 # Para consturir la imagen del servidor se ejecuta:
 #
-# $ docker build --tag=jdvelasq/api-server:0.1 . 
+# $ docker build --tag=jdvelasq/api-server:0.1 . (tag=colocar mi usuario de docker)
 #
 # Las inages actuales se pueden listar con:
 #
@@ -18,7 +19,9 @@
 #
 # Para lanzar el servidor se ejecuta:
 #
+# En la carpeta raiz del proyecto (taller-presencial-dionisioblancobello)
 # $ docker run --network=mynetwork --rm -it --name=api-server -p 5001:5000 -v "$PWD"/datalake:/datalake jdvelasq/api-server:0.1
+# $ docker run --network=mynetwork --rm -it --name=api-client -p 5001:5000 -v "%cd%/datalake:/datalake" jdvelasq/api-server:0.1
 #
 
 # Definición de la imagen base
@@ -42,5 +45,3 @@ EXPOSE 5000
 WORKDIR /workspace
 ENTRYPOINT ["python", "/app/server.py"]
 
-#Para ejecutar
-#docker build --tag=anlarevalogo/api-server:0.1 .

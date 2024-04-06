@@ -1,4 +1,3 @@
-#
 # Usage from command line:
 #
 #
@@ -30,7 +29,5 @@ if __name__ == "__main__":
     
     
     
-    
-
     
     

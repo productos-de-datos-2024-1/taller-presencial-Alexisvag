@@ -71,19 +71,15 @@ def main():
 if __name__ == "__main__":
     main()
 
+    
+    
+    
+    
+    
+    
+    
 
 
 
 
 
-
-
-
-
-# pip install importlib_resources
-# from importlib_resources import files
-
-# To read a file from a package
-# file_path = files('my_package').joinpath('my_file.txt')
-# with open(file_path, 'r') as f:
-#     content = f.read()

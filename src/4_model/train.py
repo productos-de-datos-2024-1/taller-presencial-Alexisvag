@@ -14,17 +14,8 @@ optional arguments:
   --max_neighbors MAX_NEIGHBORS
                         Max number of neighbors to use
 
-                        
-                        
-                        
-                        
+python src\4_model\train.py --max_features 7 --cv 5 --max_neighbors 10
 ```
-
-
-
-
-
-
 """
 
 import argparse
@@ -46,8 +37,6 @@ from sklearn.preprocessing import StandardScaler
 # -----------------------------------------------------------------------------
 # Logging
 # -----------------------------------------------------------------------------
-
-
 CONFIG_FILE = "config.json"
 
 if not pkg_resources.resource_exists(__name__, CONFIG_FILE):
@@ -66,8 +55,6 @@ logging.basicConfig(
 # -----------------------------------------------------------------------------
 # Model definition
 # -----------------------------------------------------------------------------
-
-
 def make_pipeline(estimator):
     """Create a pipeline with a given estimator"""
 
@@ -79,7 +66,6 @@ def make_pipeline(estimator):
         ]
     )
 
-
 def make_gridsearch(pipeline, param_grid, cv):
     """Create a gridsearch with a given pipeline and parameters"""
 
@@ -88,7 +74,6 @@ def make_gridsearch(pipeline, param_grid, cv):
         param_grid=param_grid,
         cv=cv,
     )
-
 
 def make_linear_regressor(max_features, cv):
     """Create a gridsearch with a given pipeline and parameters"""
@@ -114,12 +99,9 @@ def make_knn_regressor(max_features, cv, max_neighbors):
     gridsearch = make_gridsearch(pipeline, param_grid, cv=cv)
     return gridsearch
 
-
 # -----------------------------------------------------------------------------
 # Model metrics
 # -----------------------------------------------------------------------------
-
-
 def compute_metrics(y_true, y_pred):
     """Evaluate the model using mse, mae and r2"""
 
@@ -137,12 +119,9 @@ def report_metrics(estimator, mse, mae, r2):
     print(f"  MAE: {mae}")
     print(f"   R2: {r2}")
 
-
 # -----------------------------------------------------------------------------
 # Model management
 # -----------------------------------------------------------------------------
-
-
 def load_model_from_disk():
     """Load the model from the disk"""
 

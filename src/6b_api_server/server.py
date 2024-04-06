@@ -1,5 +1,5 @@
-
 """API server example
+
 
 
 Usage from command line:
@@ -7,6 +7,9 @@ Usage from command line:
 ```bash
 $ curl http://127.0.0.1:5001 -X POST -H "Content-Type: application/json"  -d '{"bathrooms": "2", "bedrooms": "3", "sqft_living": "1800",  "sqft_lot": "2200", "floors": "1", "waterfront": "1", "condition": "3"}'
 1605832.1056204173%  
+
+CMD
+curl http://127.0.0.1:5001 -X POST -H "Content-Type: application/json" -d "{\"bathrooms\": \"2\", \"bedrooms\": \"3\", \"sqft_living\": \"1800\", \"sqft_lot\": \"2200\", \"floors\": \"1\", \"waterfront\": \"1\", \"condition\": \"3\"}"
 
 """
 
@@ -81,4 +84,3 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True, port=5001)
-

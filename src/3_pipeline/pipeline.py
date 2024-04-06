@@ -121,10 +121,3 @@ if __name__ == "__main__":
     etl()
     move_files()
     downsampling()
-
-    
-    
-    
-    
-    
-    

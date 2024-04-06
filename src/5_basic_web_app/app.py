@@ -69,7 +69,7 @@ def index():
 
         df = pd.DataFrame.from_dict(user_values, orient="index").T
 
-        logging.info("User values: %s", user_values)
+        logging.info("User values: %s", repr(user_values))
 
         model_path = config["models_dir"] + config["house_prices_model"]
         with open(model_path, "rb") as f:
@@ -87,8 +87,4 @@ def index():
 if __name__ == "__main__":
     logging.info("Starting the application")
     app.run(debug=True)
-    logging.info("Starting the application")
-    
-    
-    
-    
+    logging.info("Application finished")
