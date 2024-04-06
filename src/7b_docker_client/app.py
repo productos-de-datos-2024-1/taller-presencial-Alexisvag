@@ -1,4 +1,3 @@
-
 """Web application to deploy the model"""
 
 import json
@@ -94,6 +93,3 @@ if __name__ == "__main__":
     logging.info("Starting the application")
     app.run(debug=True, port=5000, host="0.0.0.0")
     logging.info("Finishing the application")
-    
-    
-    

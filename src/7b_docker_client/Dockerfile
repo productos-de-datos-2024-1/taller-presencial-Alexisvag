@@ -40,5 +40,3 @@ RUN mkdir /datalake
 EXPOSE 5000
 WORKDIR /workspace
 ENTRYPOINT ["python", "/app/app.py"]
-
-

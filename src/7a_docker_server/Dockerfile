@@ -1,7 +1,3 @@
-
-    
-    
-    # 
 # Docker Server
 # =============================================================================
 #
@@ -46,3 +42,5 @@ EXPOSE 5000
 WORKDIR /workspace
 ENTRYPOINT ["python", "/app/server.py"]
 
+#Para ejecutar
+#docker build --tag=anlarevalogo/api-server:0.1 .
